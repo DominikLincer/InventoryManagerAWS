@@ -1,0 +1,16 @@
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\InventoryManagerDemo.Database.deps.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\InventoryManagerDemo.Database.runtimeconfig.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\InventoryManagerDemo.Database.runtimeconfig.dev.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\InventoryManagerDemo.Database.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\InventoryManagerDemo.Database.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Release\netcoreapp2.1\InventoryManagerDemo.Database.csprojAssemblyReference.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Release\netcoreapp2.1\InventoryManagerDemo.Database.csproj.CoreCompileInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Release\netcoreapp2.1\InventoryManagerDemo.Database.AssemblyInfoInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Release\netcoreapp2.1\InventoryManagerDemo.Database.AssemblyInfo.cs
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Release\netcoreapp2.1\InventoryManagerDemo.Database.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Release\netcoreapp2.1\InventoryManagerDemo.Database.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\InventoryManagerDemo.Services.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\Newtonsoft.Json.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\InventoryManagerDemo.Services.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Release\netcoreapp2.1\Newtonsoft.Json.xml
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Release\netcoreapp2.1\InventoryManagerDemo.Database.csproj.CopyComplete

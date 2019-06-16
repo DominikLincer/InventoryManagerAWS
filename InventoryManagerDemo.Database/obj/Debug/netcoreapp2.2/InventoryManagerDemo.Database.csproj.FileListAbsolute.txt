@@ -1,0 +1,11 @@
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Database.deps.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Database.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Database.csproj.CoreCompileInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Database.AssemblyInfoInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Database.AssemblyInfo.cs
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Database.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Database.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Database.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Database.csprojAssemblyReference.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Database.runtimeconfig.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Database\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Database.runtimeconfig.dev.json

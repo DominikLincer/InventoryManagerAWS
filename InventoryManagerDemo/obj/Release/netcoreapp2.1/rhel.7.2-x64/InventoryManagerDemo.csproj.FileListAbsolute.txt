@@ -1,0 +1,16 @@
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.deps.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.runtimeconfig.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.runtimeconfig.dev.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.csprojAssemblyReference.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.csproj.CoreCompileInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.AssemblyInfoInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.AssemblyInfo.cs
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.Database.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.Database.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.csproj.CopyComplete
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.Services.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Release\netcoreapp2.1\rhel.7.2-x64\InventoryManagerDemo.Services.pdb

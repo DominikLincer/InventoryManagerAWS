@@ -1,0 +1,1 @@
+dotnet lambda deploy-serverless -cfg aws-lambda-tools-defaults.json -pcfg true

@@ -1,0 +1,11 @@
+
+{
+    "region" : "eu-central-1",
+    "configuration" : "Release",
+    "framework"     : "netcoreapp2.1",
+    "stack-name"    : "InventoryManagerDemo",
+    "s3-bucket"     : "inventory-manager-demo-bucket",
+    "s3-prefix"     : "InventoryManagerDemo/",
+    "template"      : "serverless.template",
+    "template-parameters" : ""
+}

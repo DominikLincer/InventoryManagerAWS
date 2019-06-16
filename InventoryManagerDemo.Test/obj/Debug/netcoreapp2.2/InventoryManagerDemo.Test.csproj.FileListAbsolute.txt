@@ -1,0 +1,13 @@
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Test.deps.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Test.runtimeconfig.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Test.runtimeconfig.dev.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Test.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Test.csproj.CoreCompileInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Test.AssemblyInfoInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Test.AssemblyInfo.cs
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\bin\Debug\netcoreapp2.2\InventoryManagerDemo.Test.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Test.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo.Test\obj\Debug\netcoreapp2.2\InventoryManagerDemo.Test.pdb

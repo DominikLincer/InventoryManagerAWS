@@ -1,0 +1,35 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Resources stack for InventoryManagerDemo",
+  "Resources" : {
+    "ConfigBucket" : {
+      "Type": "AWS::S3::Bucket",
+      "Properties" : {
+        "AccessControl" : "PublicRead",
+        "BucketName" : "inventory-manager-demo-bucket"
+      }
+    },
+    "DatabaseInstanceSecret": {
+      "Type": "AWS::SecretsManager::Secret",
+      "Properties": {
+        "Description": "This is the secret for my RDS instance",
+        "GenerateSecretString": {
+          "SecretStringTemplate": "{\"username\":\"admin\"}",
+          "GenerateStringKey": "password",
+          "PasswordLength": 16,
+          "ExcludeCharacters": "\"@/\\"
+        }
+      }
+    },
+    "Database" : {
+      "Type" : "AWS::RDS::DBInstance",
+      "Properties" : {
+        "DBInstanceClass" : "db.t2.micro",
+        "AllocatedStorage" : "20",
+        "Engine" : "sqlserver-ex",
+        "MasterUsername": {"Fn::Join" : ["", ["{{resolve:secretsmanager:", { "Ref" : "DatabaseInstanceSecret" }, ":SecretString:username}}" ]]},
+        "MasterUserPassword" : {"Fn::Join" : ["", ["{{resolve:secretsmanager:", { "Ref" : "DatabaseInstanceSecret" }, ":SecretString:password}}" ]]}
+      }
+    }
+  }
+}

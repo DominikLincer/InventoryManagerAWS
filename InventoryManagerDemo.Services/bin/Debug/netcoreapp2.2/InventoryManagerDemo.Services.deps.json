@@ -1,0 +1,73 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "878f1876c4e95f6293e28b6d25f5cbbd9865ab30"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "InventoryManagerDemo.Services/1.0.0": {
+        "dependencies": {
+          "AWSSDK.SecretsManager": "3.3.100.5",
+          "Newtonsoft.Json": "9.0.0.0"
+        },
+        "runtime": {
+          "InventoryManagerDemo.Services.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.100.5": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.100.5"
+          }
+        }
+      },
+      "AWSSDK.SecretsManager/3.3.100.5": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.100.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.SecretsManager.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.100.5"
+          }
+        }
+      },
+      "Newtonsoft.Json/9.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1.19813"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InventoryManagerDemo.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSSDK.Core/3.3.100.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ruraTHbjgzH2pShWOk/lcE/YLO6KgkKd0p0ZPYFSswzvaPyNfTed4PW645TYbV55yH3sDHHZhp5fThbGzWnwUw==",
+      "path": "awssdk.core/3.3.100.5",
+      "hashPath": "awssdk.core.3.3.100.5.nupkg.sha512"
+    },
+    "AWSSDK.SecretsManager/3.3.100.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3yDJcU6eihP9r2VSVzVb7j0xyAamNYHeCjKhIAb42rP76g3DBeayDkBX9Ij4d/VqoZ+6rq6QoCCVVmZIAH2/CQ==",
+      "path": "awssdk.secretsmanager/3.3.100.5",
+      "hashPath": "awssdk.secretsmanager.3.3.100.5.nupkg.sha512"
+    },
+    "Newtonsoft.Json/9.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

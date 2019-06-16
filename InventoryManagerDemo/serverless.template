@@ -1,0 +1,66 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Description": "An AWS Serverless Application.",
+
+  "Resources": {
+    "InventoryManagerLambdaExecutionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": {
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "lambda.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+          }
+        },
+		"ManagedPolicyArns": [ 
+			"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+			"arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole" 
+		], 
+        "Policies": [
+          {
+            "PolicyName": "lambdaPolicyAllowSecretsManager",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": {
+                "Effect": "Allow",
+                "Action": "secretsmanager:*",
+                "Resource": "*"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "HelloWorldLambda": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "InventoryManagerDemo::InventoryManagerDemo.Functions::Get",
+        "Runtime": "dotnetcore2.1",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": { "Fn::GetAtt": ["InventoryManagerLambdaExecutionRole", "Arn"] },
+		"Events": {
+		  "PutResource": {
+		    "Type": "Api",
+		    "Properties": {
+		      "Path": "/",
+			  "Method": "GET"
+			}
+		  }
+		}
+      }
+    }
+  },
+  "Outputs": {
+    "ApiURL": {
+      "Description": "API endpoint URL for Prod environment",
+      "Value": { "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/" }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.deps.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.runtimeconfig.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.runtimeconfig.dev.json
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.Database.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.Services.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.Database.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\bin\Debug\netcoreapp2.1\InventoryManagerDemo.Services.pdb
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Debug\netcoreapp2.1\InventoryManagerDemo.csprojAssemblyReference.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Debug\netcoreapp2.1\InventoryManagerDemo.csproj.CoreCompileInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Debug\netcoreapp2.1\InventoryManagerDemo.AssemblyInfoInputs.cache
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Debug\netcoreapp2.1\InventoryManagerDemo.AssemblyInfo.cs
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Debug\netcoreapp2.1\InventoryManagerDemo.csproj.CopyComplete
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Debug\netcoreapp2.1\InventoryManagerDemo.dll
+D:\YouTube\AWS Microservice\InventoryManagerDemo\InventoryManagerDemo\obj\Debug\netcoreapp2.1\InventoryManagerDemo.pdb
