@@ -9,19 +9,17 @@ namespace InventoryManagerDemo.Services
 {
     public class SecretsManagerService
     {
-        public DbUserModel GetSecret()
+        public DbUserModel GetSecretAsync()
         {
-            var secretName = "DatabaseInstanceSecret-AbkrqcK7ftaQ";
+            var secretName = "DatabaseInstanceSecret-8LfFApTezOAE";
             var region = "eu-central-1";
-
             var client = new AmazonSecretsManagerClient(RegionEndpoint.GetBySystemName(region));
             var request = new GetSecretValueRequest
             {
-                SecretId = secretName
+                SecretId = secretName,
             };
 
             var response = client.GetSecretValueAsync(request).Result;
-
             if (response.SecretString == null)
             {
                 throw new ArgumentNullException(response.SecretString);

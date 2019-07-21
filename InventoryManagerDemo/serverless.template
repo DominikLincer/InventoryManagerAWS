@@ -17,10 +17,10 @@
             "Action": "sts:AssumeRole"
           }
         },
-		"ManagedPolicyArns": [ 
-			"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-			"arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole" 
-		], 
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+          "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+        ],
         "Policies": [
           {
             "PolicyName": "lambdaPolicyAllowSecretsManager",
@@ -28,7 +28,7 @@
               "Version": "2012-10-17",
               "Statement": {
                 "Effect": "Allow",
-                "Action": "secretsmanager:*",
+                "Action": "secretsmanager:GetSecretValue",
                 "Resource": "*"
               }
             }
@@ -36,24 +36,58 @@
         ]
       }
     },
-    "HelloWorldLambda": {
+    "GetPalletFunction": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "InventoryManagerDemo::InventoryManagerDemo.Functions::Get",
+        "Handler": "InventoryManagerDemo::InventoryManagerDemo.Lambdas.GetPalletFunction::GetPallet",
         "Runtime": "dotnetcore2.1",
         "CodeUri": "",
         "MemorySize": 256,
-        "Timeout": 30,
-        "Role": { "Fn::GetAtt": ["InventoryManagerLambdaExecutionRole", "Arn"] },
-		"Events": {
-		  "PutResource": {
-		    "Type": "Api",
-		    "Properties": {
-		      "Path": "/",
-			  "Method": "GET"
-			}
-		  }
-		}
+        "Timeout": 300,
+        "Role": { "Fn::GetAtt": [ "InventoryManagerLambdaExecutionRole", "Arn" ] },
+        "VpcConfig": {
+          "SecurityGroupIds": [ { "Fn::ImportValue": "InventoryManagerSecurityGroup" } ],
+          "SubnetIds": [
+            { "Fn::ImportValue": "InventoryManagerFirstSubnet" },
+            { "Fn::ImportValue": "InventoryManagerSecondSubnet" }
+          ]
+        },
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/GetPallet/{palletId}",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "PlacePalletFunction": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "InventoryManagerDemo::InventoryManagerDemo.Lambdas.PlacePalletFunction::PlacePallet",
+        "Runtime": "dotnetcore2.1",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 300,
+        "Role": { "Fn::GetAtt": [ "InventoryManagerLambdaExecutionRole", "Arn" ] },
+        "VpcConfig": {
+          "SecurityGroupIds": [ { "Fn::ImportValue": "InventoryManagerSecurityGroup" } ],
+          "SubnetIds": [
+            { "Fn::ImportValue": "InventoryManagerFirstSubnet" },
+            { "Fn::ImportValue": "InventoryManagerSecondSubnet" }
+          ]
+        },
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/PlacePallet",
+              "Method": "POST"
+            }
+          }
+        }
       }
     }
   },

@@ -1,5 +1,8 @@
-﻿namespace InventoryManagerDemo.Database.Models
+﻿using System;
+
+namespace InventoryManagerDemo.Database.Models
 {
+    [Obsolete]
     public class Stillage
     {
         public int Id { get; set; }

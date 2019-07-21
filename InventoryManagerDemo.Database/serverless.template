@@ -9,6 +9,112 @@
         "BucketName" : "inventory-manager-demo-bucket"
       }
     },
+	"InternetGateway" : {
+	  "Type" : "AWS::EC2::InternetGateway"
+	},
+	"VPCGatewayAttachment" : {
+      "Type" : "AWS::EC2::VPCGatewayAttachment",
+      "Properties" : {
+        "VpcId" : { "Ref" : "VPC" },
+        "InternetGatewayId" : { "Ref" : "InternetGateway" }
+      }
+	},
+	"RouteTable": {
+	  "Type": "AWS::EC2::RouteTable",
+	  "Properties" : {
+        "VpcId": {"Ref" : "VPC" }
+		}
+	},
+	"InternetRoute" : {
+	  "Type": "AWS::EC2::Route",
+	  "DependsOn": "VPCGatewayAttachment",
+	  "Properties" : {
+		"DestinationCidrBlock": "0.0.0.0/0",
+		"GatewayId": { "Ref" : "InternetGateway" },
+		"RouteTableId" :  {"Ref" : "RouteTable" }
+		}
+	},
+	"VPC": {
+	  "Type": "AWS::EC2::VPC",
+	  "Properties": {
+	    "EnableDnsHostnames" : true,
+		"EnableDnsSupport" : true,
+		"CidrBlock" : "10.0.0.0/16"
+	  }
+	},
+	"SubnetA": {
+		"Type": "AWS::EC2::Subnet",
+		"Properties": {
+		 "AvailabilityZone" : "eu-central-1a",
+		 "VpcId" : { "Ref" : "VPC" },
+		 "CidrBlock" : "10.0.0.0/24",
+		 "MapPublicIpOnLaunch": true
+		}
+	},
+	"SubnetB": {
+		"Type": "AWS::EC2::Subnet",
+		"Properties": {
+		 "AvailabilityZone" : "eu-central-1b",
+		 "VpcId" : { "Ref" : "VPC" },
+		 "CidrBlock" : "10.0.1.0/24",
+		  "MapPublicIpOnLaunch": true
+		}
+	},
+	"SubnetARouteTableAssociation": {
+		"Type": "AWS::EC2::SubnetRouteTableAssociation",
+		"Properties": {
+		 "RouteTableId" : { "Ref" : "RouteTable" },
+		 "SubnetId" : { "Ref" : "SubnetA" }
+		}
+	},
+	"SubnetBRouteTableAssociation": {
+		"Type": "AWS::EC2::SubnetRouteTableAssociation",
+		"Properties": {
+		 "RouteTableId" : { "Ref" : "RouteTable" },
+		 "SubnetId" : { "Ref" : "SubnetB" }
+		}
+	},
+	"DBSubnetGroup": {
+		"Type" : "AWS::RDS::DBSubnetGroup",
+		"Properties": {
+			"DBSubnetGroupDescription": "Inventory Manager DB subnet group",
+			"SubnetIds" : [{ "Ref": "SubnetA" }, { "Ref" : "SubnetB" }]
+		}
+	},
+	"SecurityGroup": {
+		"Type": "AWS::EC2::SecurityGroup",
+		"Properties": {
+			"VpcId" : { "Ref" : "VPC" },
+            "GroupName" : "InventoryManagerSecurityGroup",
+            "GroupDescription" : "Security group for inventory manager",
+			"SecurityGroupEgress" : [{
+			  "IpProtocol" : "-1", 
+			  "CidrIp" : "0.0.0.0/0"
+			}]
+		}
+	},
+	"SecurityGroupIngress": {
+	  "Type" : "AWS::EC2::SecurityGroupIngress",
+      "Properties" : {
+		"GroupId" : { "Ref" : "SecurityGroup" },
+		"SourceSecurityGroupId" : { "Ref" : "SecurityGroup" },
+		"IpProtocol" : "-1",
+        "ToPort" : "65535",
+        "FromPort" : "0"
+	  },
+	  "DependsOn" : "SecurityGroup"
+	},
+	"SecretsManagerVPCEndpoint": {
+	  "Type" : "AWS::EC2::VPCEndpoint",
+	  "Properties" : {
+		  "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.secretsmanager" },
+		  "VpcId" : { "Ref": "VPC" },
+          "SubnetIds" : [{ "Ref": "SubnetA" }, { "Ref" : "SubnetB" }],
+          "SecurityGroupIds" : [ { "Ref": "SecurityGroup" } ],
+          "VpcEndpointType" : "Interface",
+          "PrivateDnsEnabled" : true
+		}
+	},
     "DatabaseInstanceSecret": {
       "Type": "AWS::SecretsManager::Secret",
       "Properties": {
@@ -27,9 +133,29 @@
         "DBInstanceClass" : "db.t2.micro",
         "AllocatedStorage" : "20",
         "Engine" : "sqlserver-ex",
-        "MasterUsername": {"Fn::Join" : ["", ["{{resolve:secretsmanager:", { "Ref" : "DatabaseInstanceSecret" }, ":SecretString:username}}" ]]},
-        "MasterUserPassword" : {"Fn::Join" : ["", ["{{resolve:secretsmanager:", { "Ref" : "DatabaseInstanceSecret" }, ":SecretString:password}}" ]]}
+		"PubliclyAccessible" : true,
+        "DBSubnetGroupName" : { "Ref": "DBSubnetGroup" },
+		"VPCSecurityGroups" : [{ "Ref": "SecurityGroup" }],
+        "MasterUsername": { "Fn::Join" : ["", ["{{resolve:secretsmanager:", { "Ref" : "DatabaseInstanceSecret" }, ":SecretString:username}}" ]]},
+        "MasterUserPassword" : { "Fn::Join" : ["", ["{{resolve:secretsmanager:", { "Ref" : "DatabaseInstanceSecret" }, ":SecretString:password}}" ]]}
       }
     }
+  },
+  "Outputs" : {
+	  "InventoryManagerFirstSubnet" : {
+		"Description" : "The Inventory Manager first subnet",
+		"Value" :  { "Ref" : "SubnetA" },
+		"Export" : { "Name" : "InventoryManagerFirstSubnet" }
+	  },
+	  "InventoryManagerSecondSubnet" : {
+		"Description" : "The Inventory Manager second subnet",
+		"Value" :  { "Ref" : "SubnetB" },
+		"Export" : { "Name" : "InventoryManagerSecondSubnet" }
+	  },
+	  "InventoryManagerSecurityGroup" : {
+		"Description" : "The Inventory Manager security group ",
+		"Value" :  { "Ref" : "SecurityGroup" },
+		"Export" : { "Name" : "InventoryManagerSecurityGroup" }
+	  }
   }
 }
